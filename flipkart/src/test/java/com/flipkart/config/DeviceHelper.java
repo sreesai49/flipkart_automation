@@ -1545,7 +1545,6 @@ public class DeviceHelper {
      * Asserts that a condition is true. If it isn't,
      * an AssertionError is thrown.
      *
-     * @author Ramesh
      * @param: String
      */
     public void isElementNotPresentUsingTextXpath(String value) {
@@ -1561,7 +1560,6 @@ public class DeviceHelper {
      * Asserts that a condition is true. If it isn't,
      * an AssertionError is thrown.
      *
-     * @author Ramesh
      * @param: String
      */
     public void isElementNotPresentUsingTextXpath(String value, int scrollCount) {
@@ -1580,7 +1578,6 @@ public class DeviceHelper {
     /**
      * This method will drag And Drop the element.
      *
-     * @author : Ramesh
      * @param: Mobile Element
      * @since : 28-11-2019
      */
@@ -1659,7 +1656,6 @@ public class DeviceHelper {
      * This Function is to generateXpath and scroll to text element
      *
      * @return MobileElement
-     * @author Ramesh
      * @param: String
      */
     public boolean generateTextXpathAndScrollToElementText(String value, int count) {
@@ -1692,7 +1688,6 @@ public class DeviceHelper {
      * This Function is to generateXpath and scroll to text element
      *
      * @return MobileElement
-     * @author Ramesh
      * @param: String
      */
     public boolean generateTextXpathAndScrollWithElementToText(MobileElement element, String textToFind, int count) {
@@ -1725,7 +1720,6 @@ public class DeviceHelper {
      * This Function is converting string to integer
      *
      * @return int
-     * @author Ramesh
      * @param: String
      */
     public int convertStringToInteger(String value) {
@@ -1736,7 +1730,6 @@ public class DeviceHelper {
     /**
      * This Function is enable/disable GPS
      *
-     * @author Deepak/Ramesh
      */
     public void toggleGPS() {
         ((AndroidDriver) driver).toggleLocationServices();
@@ -1769,7 +1762,6 @@ public class DeviceHelper {
      * This Function is validating two string
      *
      * @return boolean
-     * @author Ramesh
      * @param: String
      */
     public boolean verifyTextContains(String expected, String actual) {
@@ -1785,7 +1777,6 @@ public class DeviceHelper {
     /**
      * Perform swipe Left action on Element
      *
-     * @author : Somasekhar M
      * @since : 04-Feb-2020
      */
     public void swipeLeftOnElement(MobileElement ele0) {
@@ -1806,7 +1797,6 @@ public class DeviceHelper {
     /**
      * Perform swipe Right action on Element
      *
-     * @author : Somasekhar M
      * @since : 04-Feb-2020
      */
     public void swipeRightOnElement(MobileElement ele0) {
@@ -1825,7 +1815,6 @@ public class DeviceHelper {
     /**
      * Perform swipe Right action on Element
      *
-     * @author : Somasekhar M
      * @since : 16-Jun-2020
      */
     public void swipeUpOnElement(MobileElement ele0) {
@@ -1849,7 +1838,6 @@ public class DeviceHelper {
     /**
      * Perform swipe Right action on Element
      *
-     * @author : Somasekhar M
      * @since : 04-Feb-2020
      */
     public void swipeByElements(AndroidElement startElement, AndroidElement endElement) {
@@ -1869,7 +1857,6 @@ public class DeviceHelper {
      * This Function to get screen Landscape/Portrait
      *
      * @return ScreenOrientation
-     * @author Ramesh
      */
     public ScreenOrientation getOrientation() {
         return driver.getOrientation();
@@ -1878,7 +1865,6 @@ public class DeviceHelper {
     /**
      * This Function is to swipe left to Right
      *
-     * @author Ramesh
      */
     public void swipeLeftToRight() {
 //        Dimension size = driver.manage().window().getSize();
@@ -1915,7 +1901,6 @@ public class DeviceHelper {
     }
 
     /**
-     * @author : Somasekhar M
      * @since : 25-Feb-2020
      */
     public void doubleTapOnElement(MobileElement element) {
@@ -1927,7 +1912,6 @@ public class DeviceHelper {
     /**
      * This Function is to Scroll to element UnTill element not visible
      *
-     * @author Ramesh
      * @param: Mobile Element & String
      */
     public void scrollToMobileElementUnTillElementNotVisible(MobileElement element, String scrollCount) {
@@ -1972,8 +1956,6 @@ public class DeviceHelper {
 
     /**
      * This Function is to generateXpath using text and Check element is present using assert
-     *
-     * @author Ramesh
      * @param: String
      */
     public boolean getSizeOfElement(String value) {
@@ -2027,9 +2009,7 @@ public class DeviceHelper {
         return boundsValues;
     }
 
-    /**
-     * @author Ramesh
-     */
+
     public void ZoomOut(MobileElement element){
         List<Integer> boundsValue = getBounds(element);
         int x1Value = boundsValue.get(0);
@@ -2051,9 +2031,6 @@ public class DeviceHelper {
         waitInSec(3);
     }
 
-    /**
-     * @author Ramesh
-     */
     public void ZoomIn(MobileElement element){
         List<Integer> boundsValue = getBounds(element);
         int x1Value=boundsValue.get(0);
@@ -2080,7 +2057,6 @@ public class DeviceHelper {
      * This Function is to generateXpath using String and return MobileElement
      *
      * @return MobileElement
-     * @author Somasekhar M
      * @param: String
      */
     public List<MobileElement> generateXpathAndReturnElements(String value) {
@@ -2161,7 +2137,7 @@ public class DeviceHelper {
         int x1 = bounds.get(0);
         int y1 = bounds.get(1);
         int x2 = bounds.get(2);
-        int y2 = bounds.get(3) - latency;
+        int y2 = (int) (bounds.get(3) - (bounds.get(3)*0.1));
 
         int endY = (int) (y1 + ((y2-y1)*0.4));
         int X = x2/2;
@@ -2176,7 +2152,6 @@ public class DeviceHelper {
     /**
      * This Function is to longPress on middle of the screen
      *
-     * @author Ramesh
      */
     public void longPressOnMiddleOfScreen(int value) {
         Dimension size = driver.manage().window().getSize();
@@ -2209,7 +2184,6 @@ public class DeviceHelper {
     }
 
     /**
-     * @author Ramesh
      * @version 1.0
      */
     public void pasteClipBoardContent1() {
@@ -2220,7 +2194,6 @@ public class DeviceHelper {
     }
 
     /**
-     * @author Ramesh
      * @version 1.0
      */
     public void passCommandToTerminal(String value) {
@@ -2235,7 +2208,6 @@ public class DeviceHelper {
     /**
      * This Function is to Enable or Disable GPS on device
      * User can pass ON or OFF thought parameter If ON GPS will Enable or If OFF GPS will Disable
-     * @author Ramesh
      * @param: String
      * @Since 16-April-2020
      */

@@ -31,7 +31,9 @@ public class LoginActions {
     }
 
     public void tapOnUseEmailId() {
-        deviceHelper().waitTillTheElementIsVisible(loginObjects.useEmailLink);
+        if (!deviceHelper().isElementPresent(loginObjects.useEmailLink)) {
+            deviceHelper().clickBackBtn();
+        }
         loginObjects.useEmailLink.click();
         deviceHelper().reportLogging("Tap on user email ID link in login screen");
     }
