@@ -1,0 +1,37 @@
+{
+  "android": {
+    "platformName": "android",
+    "platformVersion": "9.0",
+    "automationName": "appium",
+    "app": "apkfile/SharechatAndroid-debug-4698.apk",
+    "noReset": "false",
+    "fullReset": "true",
+    "appPackage": "in.mohalla.sharechat",
+    "appActivity": "in.mohalla.sharechat.splash.SplashActivity",
+    "deviceName": "61128792"
+  },
+  "iOS": {
+    "platformName": "iOS",
+    "browserName": "Safari",
+    "deviceName": "iPhone",
+    "usePrebuiltWDA": true,
+    "wdaLaunchTimeout": "80000",
+    "wdaConnectionTimeout": "80000",
+    "preventWDAAttachments": true,
+    "clearSystemFiles": true,
+    "shouldUseSingletonTestManager": false,
+    "simpleIsVisibleCheck": true,
+    "maxTypingFrequency": 10
+  },
+  "hostMachines": [
+    {
+      "machineIP": "127.0.0.1",
+      "simulators": [
+        {
+          "deviceName": "iPhone 6",
+          "OS": "11.2"
+        }
+      ]
+    }
+  ]
+}
